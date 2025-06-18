@@ -1,0 +1,78 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "recipient",
+						"type": "address"
+					}
+				],
+				"name": "fund",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "getBalence",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"tutedudecourse/transforFun.sol": "transforFun"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"tutedudecourse/transforFun.sol": {
+			"keccak256": "0x69995bb6dace65d117dfc294864a7686458e854da71d3682d12d8983cfb12333",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://5f79ba762df3b628a9d0769d1cd71ce216bc7d3f8bf4f46321ca301c91e34498",
+				"dweb:/ipfs/QmVi2cuRZv9Rjbw3YTRLmf7zu12h5t5iA8V4fU5YYr6nyh"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,31 @@
+// SPDX-License-Identifier: GPL-3.0
+
+pragma solidity >=0.4.22 <0.9.0;
+
+contract withdrow {
+    address public  owner;
+    constructor(){
+        owner=msg.sender;
+    }
+    //this is a modifier
+    //use to put restractions on function use
+    modifier onlyowner(){
+        require(msg.sender==owner, "onluy owner can see");
+        _;
+    }
+    function fund() public payable {
+        require(msg.value >0, "cannot be zero");
+    }
+
+    // function to withdrow thw money
+    function withdrows(uint amt)public  onlyowner {
+        require(address(this).balance>amt, "insufficient balance");
+        // payable (owner).transfer(amt);
+        (bool success,)=payable(owner).call{value:amt}("");
+        require(success, "Invalid");
+
+    }
+    function getBlanc() public  view returns(uint256){
+        return address(this).balance;
+    }
+}
